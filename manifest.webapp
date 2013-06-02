@@ -5,7 +5,7 @@
         "url":"https://github.com/FireNeslo/"
     },
     "description":"Invert tiles to make the pattern to the right match the one to the left.",
-    "launch_path":"/index.html",
+    "launch_path":"/",
     "icons":{
         "128":"/icon_128.png",
         "16":"/icon_16.png"
