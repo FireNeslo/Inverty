@@ -1,0 +1,30 @@
+<div id="hs" class="modal">
+  <div class="modal-header">
+    <a href="#" class="close" data-dismiss="modal" aria-hidden="false">&times;</a>
+    <h3>High score table</h3>
+  </div>
+  <div class="modal-body">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Player</th>
+				<th>Score</th>
+				<th>Level</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="(index,row) in table() | orderBy:'score.score':true">
+				<td>{{index+1}}</td>
+				<td>{{row.player}}</td>
+				<td>{{row.score.score}}</td>
+				<td>{{row.score.level}}</td>
+			</tr>
+		</tbody>
+	</table>
+  </div>
+  <div class="clearfix"></div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+  </div>
+</div>

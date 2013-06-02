@@ -1,0 +1,28 @@
+<div id="hs" class="modal">
+  <div class="modal-header">
+    <a href="#" class="close" data-dismiss="modal" aria-hidden="false">&times;</a>
+    <h3>Game over</h3>
+  </div>
+  <div class="modal-body">
+  <form class="form-horizontal">
+		<div class="control-group">
+			<legend>Save your score?</legend>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="player">Nickname:</label>
+			<div class="controls">
+				<input type="text" ng-model="player" id="player" placeholder="Nickname">
+			</div>
+		</div>
+	    <div class="control-group">
+			<div class="controls">
+				<button ng-click="confirm()" type="submit" class="btn">Submit score</button>
+			</div>
+		</div>
+  </form>
+  </div>
+  <div class="clearfix"></div>
+  <div class="modal-footer">
+    <a href="#" class="btn">Close</a>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html manifest="inverty.appcache" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Inverty</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+    <link rel="stylesheet" href="styles/55bedf74.bootstrap.css">
+    <link rel="stylesheet" href="styles/0085e971.bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="styles/1643cd2d.main.css">
+</head>
+<body ng-app="InvertyApp" ng-csp="">
+
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+    today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+    experience this site.</p>
+<![endif]-->
+
+<!--[if lt IE 9]>
+<script src="vendor/es5-shim.min.js"></script>
+<script src="vendor/json3.min.js"></script>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div id="game" class="row-fluid" ng-controller="GameCtrl">
+    <div class="effect overlay"></div>
+    <div class="overlay menu">
+        <div class="navbar navbar-inverse" style="width:100%">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">
+                        Inverty
+						<span class="text-size-icon">
+								<span title="Level"><i class="icon-circle-arrow-up icon-white"></i><span ng-bind="stats().level">?</span></span>
+								<span title="Lives"><i class="icon-heart icon-white"></i><span ng-bind="stats().lives">?</span></span>
+								<span title="Tries left"><i class="icon-repeat icon-white"></i><span ng-bind="stats().steps">?</span></span>
+						</span>
+                    </a>
+
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <ul class="nav">
+                            <li><a href="#/high_score">High score</a></li>
+                            <li><a href="#/options">Options</a></li>
+                            <li><a href="#/about">About</a></li>
+                        </ul>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <inty-board class="span6 inty-panel-wrapper" grid="solution()" disable-invert="true"></inty-board>
+    <inty-board class="span6 inty-panel-wrapper" grid="problem()" on-click="click"></inty-board>
+</div>
+<div class="container" ng-view=""></div>
+
+<script src="vendor/angular.min.js"></script>
+<script src="vendor/jquery.min.js"></script>
+<script src="vendor/bootstrap.js"></script>
+
+<script src="scripts/1f3867f7.scripts.js"></script>
+</body>
+</html>
