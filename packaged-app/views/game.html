@@ -1,0 +1,44 @@
+<div id="game" class="row-fluid" ng-controller="gameCtrl">
+        <div class="effect overlay"></div>
+		<div class="overlay menu">
+			<div class="navbar navbar-inverse" style="width:100%">
+              <div class="navbar-inner">
+                <div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">
+						Inverty
+						<span class="text-size-icon">
+								<i class="icon-circle-arrow-up"></i> {{stats.level}}
+								<i class="icon-heart"></i> {{stats.lives}}
+								<i class="icon-repeat"></i> {{stats.steps}}
+						</span>
+					</a>
+                  <div class="nav-collapse collapse navbar-inverse-collapse">
+						<ul class="nav">
+							<li><a href="#/high_score">High score</a></li>
+							<li><a href="#/options">Options</a></li>
+							<li><a href="#/about">About</a></li>
+                        </ul>
+                      
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+		</div>
+		<div class="clearfix"></div>
+		<table class="span6" id="solution">
+			<tr ng-repeat="(y,bools) in solution" class="row-fluid">
+				<td ng-repeat="(x,b) in bools" style="width:{{width()/stats.size-10}}px;height:{{width()/stats.size-10}}px" class="tile tile-{{b}}"></td>
+			</tr>
+		</table>
+		<table class="span6" id="problem">
+			<tr ng-repeat="(y,bools) in problem" class="row">
+				<td ng-repeat="(x,b) in bools" ng-click="click(x,y)" style="width:{{width()/stats.size-10}}px;height:{{width()/stats.size-10}}px" class="tile tile-{{b}}"></td>
+			</tr>
+		</table>
+	</div>

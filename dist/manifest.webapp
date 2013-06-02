@@ -1,0 +1,14 @@
+{
+    "name":"Inverty",
+    "developer": {
+        "name":"Øystein Ø. Olsen",
+        "url":"https://github.com/FireNeslo/"
+    },
+    "description":"Invert tiles to make the pattern to the right match the one to the left.",
+    "launch_path":"/index.html",
+    "icons":{
+        "128":"/icon_128.png",
+        "16":"/icon_16.png"
+    },
+    "default_locale": "en"
+}
