@@ -8,9 +8,7 @@
     "launch_path":"/Inverty/",
     "icons":{
         "128":"/Inverty/icon_128.png",
-        "60":"/Inverty/icon_60.png",
         "16":"/Inverty/icon_16.png"
     },
     "default_locale": "en"
 }
-  
